@@ -10,15 +10,24 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "proxy": {
+    "/socket.io": {
+      "target": "ws://localhost:3001",
+      "ws": true
+    }
+  },
   "dependencies": {
+    "express": "4.15.3",
+    "helmet": "3.8.1",
     "leaflet": "1.2.0",
+    "leaflet.marker.slideto": "^0.2.0",
     "prop-types": "15.6.0",
     "react": "16.1.0",
     "react-dom": "16.1.0",
     "react-leaflet": "1.7.4",
     "react-scripts": "1.0.17",
     "socket.io": "2.0.3",
-    "express": "4.15.3"
+    "socket.io-client": "^2.0.4"
   },
   "devDependencies": {
     "nodemon": "1.11.0",
