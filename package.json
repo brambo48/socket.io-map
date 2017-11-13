@@ -1,0 +1,28 @@
+{
+  "name": "socket.io-map",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently -r \"npm run start:server\" \"npm run start:client\"",
+    "start:client": "react-scripts start",
+    "start:server": "nodemon --require reify ./server/main.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "leaflet": "1.2.0",
+    "prop-types": "15.6.0",
+    "react": "16.1.0",
+    "react-dom": "16.1.0",
+    "react-leaflet": "1.7.4",
+    "react-scripts": "1.0.17",
+    "socket.io": "2.0.3",
+    "express": "4.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "1.11.0",
+    "reify": "0.4.4",
+    "concurrently": "3.5.0"
+  }
+}

@@ -1,0 +1,16 @@
+.leaflet-container,
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.car-div-icon{
+  background-image: url("./resources/car-icon.png");
+  cursor: move!important;
+  background-size: cover;
+  width: 100px!important;
+  height: 100px!important;
+  margin: -50px 0 0 -50px!important;
+}
+
