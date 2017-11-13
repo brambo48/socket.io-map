@@ -6,9 +6,13 @@
     "start": "concurrently -r \"npm run start:server\" \"npm run start:client\"",
     "start:client": "react-scripts start",
     "start:server": "nodemon --require reify ./server/main.js",
+    "start-prod": "npm run start-prod:server",
+    "start-prod:server": "DEBUG=APP:MAIN cross-env NODE_ENV=production node --require reify ./server/main.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build",
+    "postinstall": "npm run build"
   },
   "proxy": {
     "/socket.io": {
@@ -20,14 +24,15 @@
     "express": "4.15.3",
     "helmet": "3.8.1",
     "leaflet": "1.2.0",
-    "leaflet.marker.slideto": "^0.2.0",
+    "leaflet.marker.slideto": "0.2.0",
     "prop-types": "15.6.0",
     "react": "16.1.0",
     "react-dom": "16.1.0",
     "react-leaflet": "1.7.4",
     "react-scripts": "1.0.17",
     "socket.io": "2.0.3",
-    "socket.io-client": "^2.0.4"
+    "socket.io-client": "2.0.4",
+    "cross-env": "5.0.1"
   },
   "devDependencies": {
     "nodemon": "1.11.0",
